@@ -26,6 +26,10 @@
     text-align: center;
 }
 
+.no-select{
+    user-select: none;
+}
+
 nav.navbar{
     background-color: black;
     display: flex;
