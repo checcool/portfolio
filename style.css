@@ -39,6 +39,12 @@ li.litem{
 
 li.litem:hover{
     color: aqua;
+    animation: hilightToRight 2s forwards;
+}
+
+@keyframes hilightToRight {
+    0% {transform: scale(1)}
+    100% {transform: scale(1.2);}
 }
 
 body{
