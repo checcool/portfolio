@@ -34,8 +34,18 @@
     margin: auto;
 }
 
+.margin-bottom-none{
+    margin-bottom: 0;
+}
+
 nav.navbar{
     background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.space-between{
     display: flex;
     justify-content: space-between;
     align-items: center;
