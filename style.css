@@ -22,12 +22,6 @@
     user-select: none;
 }
 
-nav.navbar{
-    background-color: black;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 .left{
     justify-self: start;
 }
@@ -40,6 +34,12 @@ nav.navbar{
     justify-self: center;
 }
 
+nav.navbar{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 li.litem{
     color: white;
 }
@@ -49,19 +49,19 @@ li.litem:hover{
     animation: hilightToRight 2s forwards;
 }
 
+@keyframes hilightToRight {
+    0% {transform: scale(1)}
+    100% {transform: scale(1.2);}
+}
+
 div.qg{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
-@keyframes hilightToRight {
-    0% {transform: scale(1)}
-    100% {transform: scale(1.2);}
-}
-
-body{
-    margin: 0;
+div.g{
+    display: grid;
 }
 
 ul.pl{
@@ -70,4 +70,10 @@ ul.pl{
     list-style-type: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
 }
+
+body{
+    margin: 0;
+}
+
