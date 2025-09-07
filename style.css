@@ -61,7 +61,7 @@ div.qg{
 }
 
 div.g{
-    display: flex;
+    display: grid;
 }
 
 ul.pl{
