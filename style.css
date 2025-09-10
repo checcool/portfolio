@@ -1,79 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Workbench&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
 
-.workbench-font{
+/* FONT STYLES */
+.workbench-font {
   font-family: "Workbench", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "BLED" 0,
-    "SCAN" 0;
 }
 
-.main-title{
-    margin: 0;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    text-align: center;
+.comic-relief-regular {
+  font-family: "Comic Relief", system-ui;
 }
 
-.ns{
-    user-select: none;
+.comic-relief-bold {
+  font-weight: 700;
 }
 
-.left{
-    justify-self: start;
+/* GLOBAL RESET */
+body {
+  margin: 0;
 }
 
-.right{
-    justify-self: end;
+h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
 }
 
-.center{
-    justify-self: center;
+/* TITLE */
+.main-title {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  text-align: center;
 }
 
-nav.navbar{
-    background-color: black;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+/* UTILITY CLASSES */
+.ns { user-select: none; }
+.left { justify-self: start; }
+.right { justify-self: end; }
+.center { justify-self: center; text-align: center; }
+
+/* NAVBAR */
+nav.navbar {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-li.litem{
-    color: white;
+ul.pl {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 10px;
 }
 
-li.litem:hover{
-    color: aqua;
-    animation: hilightToRight 2s forwards;
+li.litem {
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-@keyframes hilightToRight {
-    0% {transform: scale(1)}
-    100% {transform: scale(1.2);}
+li.litem:hover {
+  color: aqua;
+  transform: scale(1.2);
 }
 
-div.qg{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+/* GRID SECTIONS */
+.qg {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px;
+  padding: 20px;
 }
 
-div.g{
-    display: grid;
+.g {
+  display: grid;
+  place-items: center; /* semplifica il centraggio */
 }
 
-ul.pl{
-    padding: 10px;
-    margin: 0;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+iframe {
+  border-radius: 10px;
+  border: 2px solid black;
+  width: 33%;
 }
-
-body{
-    margin: 0;
-}
-
